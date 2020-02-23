@@ -6,11 +6,37 @@ html, body{
 .app-container{
     width: 1024px;
     margin: auto;
+    display:flex;
     min-height: 100%;
     background-color: white;
 }
-.navbar{
-    background-color: #f4f0f0 ;
+.navigation{
+    overflow: hidden;
+    display:flex;
+    min-height: 100%;
+    background-color: #f4f0f0;
+    font-family: sans-serif;
+    font-size: 17px;
+    padding: 14px 16px;
+}
+.nav__items{
+    display: flex;
+}
+.nav__link{
+    padding-right: 16px;
+    color: #f99497;
+}
+.navigation a:hover {
+	color: white;
+}
+
+.content-containter{
+    flex: 1 1 auto;
+    width: 100%;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .header .carousel_img {
     width: 30%;
@@ -20,10 +46,10 @@ html, body{
 }
 .description_content{
     width: 100%;
-    float: left;
+
     text-align: justify;
     font-size: 1em;
-    
+    display: block;
 }
 .description-container{
     padding: 0 20px;
@@ -36,12 +62,11 @@ html, body{
 }
 @media only screen and (min-width:1024px) {
 	.app-container {
-        width: 80%;
-        display: flex;
-        flex-wrap: wrap;
+        width: 900px;
+        flex-direction: column;
     }
     .header, .footer{
-        width: 1366px;
+        max-width: 100%;
         justify-content: space-between;
         font-size: large;
     }
@@ -58,6 +83,7 @@ html, body{
         width: 80%;
         display: flex;
         flex-wrap: wrap;
+        
     }
     .header, .footer{
         width: 1023px;
@@ -77,6 +103,10 @@ html, body{
         width: 80%;
         display: flex;
         flex-wrap: wrap;
+    }
+    .nav__items--right{
+        margin-left: auto;
+        flex-direction: column;
     }
     .header, .footer{
         width: 767px;
@@ -104,11 +134,15 @@ html, body{
         display: flex;
         flex-wrap: wrap;
     }
-    .navbar{
-        height: 50%;
+    .nav__items--right{
+        margin-left: auto;
+        flex-direction: column;
+    }
+    .nav__link{
+        font-size: 12px;
     }
     .header, .footer{
-        width: 410px;
+        width: 100%;
         display: inline-block;
     }
     .header .carousel_img{
