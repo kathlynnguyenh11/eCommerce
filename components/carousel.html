@@ -1,0 +1,23 @@
+<div class="carousel-container">
+    <img class="carousel_img" src="./images/carousel_image1.jpg">
+    <img class="carousel_img" src="./images/carousel_image2.jpg">
+    <img class="carousel_img" src="./images/carousel_image3.jpg">
+</div>
+
+<script>
+var index = 0;
+carousel ();
+
+function carousel(){
+    var i;
+    var getImg = document.getElementsByClassName("carousel_img");
+    for (i=0;i<getImg.length;i++){
+        getImg[i].style.display = "none";
+    }
+    index++;
+    if(index > getImg.length) {index = 1;}
+        getImg[index-1].style.display = "block";
+        setTimeout(carousel,3000);
+    
+}
+</script>
