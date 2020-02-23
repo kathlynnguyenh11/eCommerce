@@ -83,7 +83,6 @@ html, body{
         width: 80%;
         display: flex;
         flex-wrap: wrap;
-        
     }
     .header, .footer{
         width: 1023px;
